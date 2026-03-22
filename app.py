@@ -31,9 +31,6 @@ if st.button(" ➕ Add Expense"):
     
 st.write("### Reset All Data 🔄 ")
 
-
-if "confirm_reset" not in st.session_state:
-    st.session_state.confirm_reset = False
     
 confirm = st.checkbox("I am sure to delete all data", key = "confirm_reset")
 
@@ -42,9 +39,7 @@ if confirm:
         if os.path.exists("expenses.csv"):
             os.remove("expenses.csv")
             st.success("All data cleared !  Start fresh ✅ ")
-            
-            st.session_state.confirm_reset = False
-            st.rerun()
+                       
         
 st.divider()
 st.subheader(" 📊 Dashboard.")
@@ -110,17 +105,3 @@ try:
         st.dataframe(df)    
 except:
     st.write("No Data yet")
-#st.write(" Welcome Kunal!! this is your First App. ")
-
-
-
-#    st.write("### Delete Expense ❌")
- #   row_to_delete = st.number_input("Enter row index to delete", min_valu = 0, step = 1)
-    
-#    if st.button("Delete Row"):
-#        if row_to_delete < len(df):
-#            df = df.drop(row_to_delete)
-#            df.to_csv("expenses.csv", index = False)
-#            st.warning("Row deleted successfully !")
-#        else:
-#            sst.error("Invalid index")'''
