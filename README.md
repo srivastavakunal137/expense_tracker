@@ -18,6 +18,9 @@ A web app to track daily expenses built using Python and Streamlit.
 ```bash
 python -m streamlit run app.py
 
+## 🌐 Live Demo
+https://expensetracker-6er7bcbytett9zwm8ne3pr.streamlit.app/#expense-tracker
+
 ## 📌 Future Improvements
 - Add user authentication (login system)
 - Use database instead of CSV
